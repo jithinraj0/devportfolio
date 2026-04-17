@@ -1,0 +1,192 @@
+/* ══════════════════════════════════════════════════
+   components.css — Reusable UI Components
+   ══════════════════════════════════════════════════ */
+
+/* ── Primary Button ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-family);
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast) ease-out;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.4);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-primary .material-symbols-outlined {
+  transition: transform var(--transition-fast) ease-out;
+}
+
+.btn-primary:hover .material-symbols-outlined {
+  transform: translateX(4px);
+}
+
+/* ── Secondary / Glass Button ── */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: rgba(14, 14, 14, 0.7);
+  backdrop-filter: blur(12px);
+  color: var(--color-on-surface);
+  font-family: var(--font-family);
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(72, 72, 72, 0.2);
+  cursor: pointer;
+  transition: all var(--transition-fast) ease-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+/* ── CTA Nav Button ── */
+.btn-cta {
+  padding: 0.625rem 1.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast) ease-out;
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);
+}
+
+.btn-cta:active {
+  transform: scale(0.95);
+}
+
+/* ── Chip (Green) ── */
+.chip {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(57, 255, 20, 0.1);
+  color: var(--color-primary);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(57, 255, 20, 0.2);
+  border-radius: var(--radius-sm);
+}
+
+/* ── Chip (Neutral / White) ── */
+.chip--neutral {
+  background: rgba(28, 28, 28, 1);
+  color: var(--color-on-surface);
+  border-color: rgba(72, 72, 72, 0.3);
+}
+
+/* ── Chip (Project — smaller) ── */
+.chip--sm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.6875rem;
+  letter-spacing: -0.02em;
+}
+
+/* ── Category Badge (Project overlay) ── */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 0.625rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.badge--white {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ── Section Heading ── */
+.section-heading {
+  font-size: clamp(2rem, 5vw, 3.125rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+/* ── Section Subheading ── */
+.section-subheading {
+  font-size: 1rem;
+  color: var(--color-on-surface-variant);
+  max-width: 28rem;
+}
+
+/* ── Green Underline Bar ── */
+.heading-bar {
+  display: block;
+  width: 6rem;
+  height: 0.25rem;
+  background-color: var(--color-primary);
+  margin: 1rem auto 0;
+}
+
+/* ── Material Icon (reusable) ── */
+.icon-lg {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  transition: transform var(--transition-fast) ease-out;
+}
+
+.group:hover .icon-lg {
+  transform: scale(1.1);
+}
+
+/* ── Stat Block ── */
+.stat {
+  padding: 2rem;
+  background-color: var(--color-surface-container-low);
+  border-left: 2px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-default) ease-out;
+}
+
+.stat:hover {
+  background-color: var(--color-surface-container);
+  border-left-width: 4px;
+}
+
+.stat__number {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-on-surface-variant);
+  line-height: 1.4;
+}

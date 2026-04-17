@@ -1,0 +1,117 @@
+/* ══════════════════════════════════════════════════
+   footer.css — Footer + WhatsApp FAB
+   ══════════════════════════════════════════════════ */
+
+/* ── Footer ── */
+.footer {
+  background-color: var(--color-background);
+  border-top: 1px solid rgba(72, 72, 72, 0.15);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer__logo {
+  font-size: 1.125rem;
+  font-weight: 900;
+  color: var(--color-tertiary);
+}
+
+.footer__copyright {
+  font-size: 0.625rem;
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.footer__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__link {
+  font-size: 0.625rem;
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+  transition: all var(--transition-fast) ease-out;
+}
+
+.footer__link:hover {
+  color: var(--color-tertiary);
+  opacity: 1;
+}
+
+/* ══════════════════════════════════════════════════
+   WhatsApp FAB
+   ══════════════════════════════════════════════════ */
+
+.whatsapp-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: var(--z-fab);
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-primary);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+  transition: all 300ms ease-out;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-fab:active {
+  transform: scale(0.95);
+}
+
+.whatsapp-fab__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor;
+}
+
+/* ── Tooltip ── */
+.whatsapp-fab__tooltip {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  background-color: var(--color-surface-container-high);
+  color: var(--color-primary);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(57, 255, 20, 0.2);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-fast) ease-out;
+}
+
+.whatsapp-fab:hover .whatsapp-fab__tooltip {
+  opacity: 1;
+}

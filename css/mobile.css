@@ -1,0 +1,55 @@
+/* ══════════════════════════════════════════════════
+   mobile.css — Mobile Overrides (loaded last)
+   ══════════════════════════════════════════════════ */
+
+@media (max-width: 767px) {
+  /* ── Hero ── */
+  .hero__headline {
+    text-align: center;
+  }
+
+  .hero__bio {
+    text-align: center;
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+  }
+
+  .hero__ctas .btn-primary,
+  .hero__ctas .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__badge {
+    display: block;
+    text-align: center;
+  }
+
+  /* ── About ── */
+  .about__heading {
+    text-align: center;
+  }
+
+  /* ── Skills ── */
+  .skill-card--wide {
+    grid-column: span 1;
+  }
+
+  /* ── Experience ── */
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
+  /* ── Contact ── */
+  .contact__heading {
+    font-size: 2.5rem;
+  }
+
+  /* ── Footer ── */
+  .footer__links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

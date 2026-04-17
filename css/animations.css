@@ -1,0 +1,115 @@
+/* ══════════════════════════════════════════════════
+   animations.css — Reveal, Keyframes, Transitions
+   ══════════════════════════════════════════════════ */
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all var(--transition-slow) var(--ease-reveal);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Stagger delays (applied via inline style or nth-child) ── */
+.reveal[style*="transition-delay"] {
+  /* Allows custom delay per element */
+}
+
+/* ── Float Animation (About badge) ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-12deg); }
+  50%      { transform: translateY(-20px) rotate(-8deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ── Pulse Slow (Background orbs) ── */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(1.05); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* ── Gradient X (Mesh background) ── */
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* ── Ping (Particle dots) ── */
+@keyframes ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ── Reveal animation (CSS-only alternative) ── */
+@keyframes reveal-up {
+  0%   { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-reveal {
+  animation: reveal-up 0.8s var(--ease-reveal) forwards;
+}
+
+/* ── Glass Card Transition ── */
+.glass-card {
+  background: rgba(14, 14, 14, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(72, 72, 72, 0.2);
+  transition: all var(--transition-default) var(--ease-reveal);
+}
+
+.glass-card:hover {
+  border-color: rgba(57, 255, 20, 0.5);
+}
+
+/* ── Neon Glow Effects ── */
+.neon-text-glow {
+  text-shadow: 0 0 15px rgba(57, 255, 20, 0.6);
+}
+
+.neon-border-glow {
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+/* ── Mesh Background ── */
+.mesh-bg {
+  background:
+    radial-gradient(at 0% 0%, rgba(57, 255, 20, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(57, 255, 20, 0.05) 0px, transparent 50%);
+  background-size: 200% 200%;
+  animation: gradient-x 15s ease infinite;
+}
+
+/* ── Greyscale Image Treatment ── */
+.img-greyscale {
+  filter: grayscale(1) brightness(0.5);
+  transition: filter 1s ease;
+}
+
+.img-greyscale:hover,
+.group:hover .img-greyscale {
+  filter: grayscale(0) brightness(1);
+}
+
+/* ── Gradient Text ── */
+.gradient-text {
+  background: linear-gradient(to right, var(--color-primary), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
