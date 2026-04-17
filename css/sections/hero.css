@@ -1,0 +1,203 @@
+/* ══════════════════════════════════════════════════
+   hero.css — Hero Section (12-col Grid)
+   ══════════════════════════════════════════════════ */
+
+.section-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+/* ── Background Effects ── */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__orb {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(57, 255, 20, 0.05);
+}
+
+.hero__orb--1 {
+  top: 25%;
+  left: -5rem;
+  width: 24rem;
+  height: 24rem;
+  filter: blur(120px);
+}
+
+.hero__orb--2 {
+  bottom: 25%;
+  right: -5rem;
+  width: 31rem;
+  height: 31rem;
+  filter: blur(150px);
+  animation-delay: 2s;
+}
+
+.hero__particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.hero__dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+.hero__dot--1 { top: 10%; left: 20%; animation-duration: 3s; }
+.hero__dot--2 { top: 40%; left: 80%; animation-duration: 4s; }
+.hero__dot--3 { top: 70%; left: 30%; animation-duration: 5s; }
+
+/* ── Content Grid ── */
+.hero__grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+/* ── Eyebrow Badge ── */
+.hero__badge {
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  background-color: var(--color-surface-container-high);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid rgba(57, 255, 20, 0.2);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+}
+
+/* ── Headline ── */
+.hero__headline {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* ── Bio ── */
+.hero__bio {
+  font-size: 1.25rem;
+  color: var(--color-on-surface-variant);
+  max-width: 36rem;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.hero__bio strong {
+  color: var(--color-on-surface);
+  font-weight: 600;
+}
+
+/* ── CTAs ── */
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ── Right Side Image Card ── */
+.hero__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  filter: grayscale(1) brightness(0.5) contrast(1.25);
+  opacity: 0.8;
+  transition: filter 1s ease;
+}
+
+.hero__image-wrapper:hover .hero__image {
+  filter: grayscale(0) brightness(1) contrast(1.25);
+  opacity: 1;
+}
+
+.hero__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #000000, transparent, transparent);
+  pointer-events: none;
+}
+
+/* ── Floating Stat Badge ── */
+.hero__stat-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  left: -1.5rem;
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--color-primary);
+  z-index: 20;
+  transition: transform var(--transition-default) ease-out;
+}
+
+.hero__stat-badge:hover {
+  transform: translateY(-0.5rem);
+}
+
+.hero__stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.hero__stat-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-on-surface-variant);
+}
+
+/* ── Mobile adjustments ── */
+@media (max-width: 1023px) {
+  .hero__image-wrapper {
+    max-width: 24rem;
+    margin: 0 auto;
+  }
+
+  .hero__stat-badge {
+    bottom: -1rem;
+    left: 0;
+  }
+}

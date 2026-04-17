@@ -1,0 +1,117 @@
+/* ══════════════════════════════════════════════════
+   contact.css — Let's Connect Section
+   ══════════════════════════════════════════════════ */
+
+.section-contact {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(57, 255, 20, 0.05);
+  opacity: 0.3;
+}
+
+.contact__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.contact__heading {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+.contact__intro {
+  font-size: 1.25rem;
+  color: var(--color-on-surface-variant);
+  max-width: 42rem;
+  margin: 0 auto 4rem;
+  line-height: 1.7;
+}
+
+/* ── Contact Cards Grid ── */
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .contact__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Contact Card ── */
+.contact-card {
+  display: block;
+  padding: 2.5rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: all var(--transition-default) var(--ease-reveal);
+}
+
+.contact-card:hover {
+  transform: translateY(-0.5rem);
+  border-color: rgba(57, 255, 20, 0.5);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.15);
+}
+
+.contact-card__icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition-fast) ease-out;
+  display: inline-block;
+}
+
+.contact-card:hover .contact-card__icon {
+  transform: scale(1.1) rotate(12deg);
+}
+
+.contact-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card__value {
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+}
+
+/* ── Resume CTA ── */
+.contact__resume-btn {
+  display: inline-block;
+  padding: 1.25rem 3rem;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 25px 50px -12px rgba(57, 255, 20, 0.2);
+  transition: all var(--transition-fast) ease-out;
+}
+
+.contact__resume-btn:hover {
+  transform: scale(1.05);
+}
+
+.contact__resume-btn:active {
+  transform: scale(0.95);
+}

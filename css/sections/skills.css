@@ -1,0 +1,86 @@
+/* ══════════════════════════════════════════════════
+   skills.css — Core Competencies Bento Grid
+   ══════════════════════════════════════════════════ */
+
+.skills__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* ── Bento Grid ── */
+.skills__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .skills__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── Spanning ── */
+.skill-card--wide {
+  grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+  .skill-card--wide {
+    grid-column: span 2;
+  }
+}
+
+/* ── Skill Card ── */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: var(--radius-sm);
+}
+
+.skill-card__icon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  transition: transform var(--transition-fast) ease-out;
+}
+
+.skill-card:hover .skill-card__icon {
+  transform: scale(1.1);
+}
+
+/* Professional Process uses neutral icon */
+.skill-card--neutral .skill-card__icon {
+  color: var(--color-on-surface);
+}
+
+.skill-card:hover .skill-card__icon--rotate {
+  transform: rotate(12deg);
+}
+
+.skill-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.skill-card__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ── Languages card (text instead of chips) ── */
+.skill-card__text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-on-surface-variant);
+}

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Jithin Raj — Mobile Application Developer crafting the future of mobile with Kotlin, Flutter, and modern architecture. 5+ years of professional experience.">
+  <meta property="og:title" content="Jithin Raj | Mobile Application Developer">
+  <meta property="og:description" content="I architect high-performance native and cross-platform mobile experiences.">
+  <meta property="og:image" content="/assets/images/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <title>Jithin Raj | Mobile Application Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/sections/nav.css">
+  <link rel="stylesheet" href="/css/sections/hero.css">
+  <link rel="stylesheet" href="/css/sections/about.css">
+  <link rel="stylesheet" href="/css/sections/skills.css">
+  <link rel="stylesheet" href="/css/sections/projects.css">
+  <link rel="stylesheet" href="/css/sections/experience.css">
+  <link rel="stylesheet" href="/css/sections/education.css">
+  <link rel="stylesheet" href="/css/sections/contact.css">
+  <link rel="stylesheet" href="/css/sections/footer.css">
+  <link rel="stylesheet" href="/css/mobile.css">
+</head>
+<body>
+
+  <!-- ════════════════ NAVIGATION ════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#">Jithin Raj</a>
+
+      <div class="nav__links">
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#experience">Experience</a>
+        <a class="nav__link" href="#education">Education</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </div>
+
+      <a class="btn-cta nav__cta" href="#contact">Get in Touch</a>
+
+      <button class="nav__hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-drawer">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="nav-drawer" class="nav__drawer" role="dialog" aria-label="Navigation">
+      <button class="nav__drawer-close" aria-label="Close navigation">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <a class="nav__drawer-link" href="#projects" data-drawer-link>Projects</a>
+      <a class="nav__drawer-link" href="#skills" data-drawer-link>Skills</a>
+      <a class="nav__drawer-link" href="#experience" data-drawer-link>Experience</a>
+      <a class="nav__drawer-link" href="#education" data-drawer-link>Education</a>
+      <a class="nav__drawer-link" href="#contact" data-drawer-link>Contact</a>
+      <a class="btn-primary nav__drawer-cta" href="#contact" data-drawer-link>Get in Touch</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ════════════════ HERO ════════════════ -->
+    <section class="section-hero mesh-bg" id="hero">
+      <!-- Background effects -->
+      <div class="hero__bg">
+        <div class="hero__orb hero__orb--1 animate-pulse-slow"></div>
+        <div class="hero__orb hero__orb--2 animate-pulse-slow"></div>
+        <div class="hero__particles">
+          <div class="hero__dot hero__dot--1 animate-ping" style="animation-duration: 3s"></div>
+          <div class="hero__dot hero__dot--2 animate-ping" style="animation-duration: 4s"></div>
+          <div class="hero__dot hero__dot--3 animate-ping" style="animation-duration: 5s"></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero__grid">
+          <!-- Left: Text -->
+          <div class="animate-reveal">
+            <span class="hero__badge">Available for Innovation</span>
+            <h1 class="hero__headline">
+              Crafting the <span class="gradient-text neon-text-glow">Future</span> of Mobile
+            </h1>
+            <p class="hero__bio">
+              Hi, I'm <strong>Jithin Raj</strong>. I architect high-performance native and cross-platform mobile experiences that bridge the gap between complex logic and elegant design.
+            </p>
+            <div class="hero__ctas">
+              <a class="btn-primary" href="#projects">
+                View Projects
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+              <a class="btn-secondary" href="#experience">Experience</a>
+            </div>
+          </div>
+
+          <!-- Right: Image Card -->
+          <div class="animate-reveal" style="animation-delay: 0.2s">
+            <div class="hero__image-wrapper glass-card">
+              <img
+                class="hero__image"
+                src="/assets/images/hero-workspace.jpg"
+                alt="Developer workspace with mobile app screens"
+                loading="eager"
+              >
+              <div class="hero__image-overlay"></div>
+            </div>
+            <div class="hero__stat-badge glass-card neon-border-glow">
+              <div class="hero__stat-number">5+</div>
+              <div class="hero__stat-label">Years Professional</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ ABOUT ════════════════ -->
+    <section class="section section-about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <!-- Left: Portrait -->
+          <div class="about__portrait-col reveal">
+            <div class="about__portrait-wrapper">
+              <img
+                class="about__portrait"
+                src="/assets/images/about-portrait.jpg"
+                alt="Jithin Raj — Mobile Application Developer"
+                loading="lazy"
+              >
+              <div class="about__code-badge animate-float">
+                <span class="material-symbols-outlined">code</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Text -->
+          <div class="about__text-col reveal">
+            <h2 class="about__heading">
+              Passionate about <br><span class="about__heading-accent">Technical Excellence.</span>
+            </h2>
+            <p class="about__body">
+              As a dedicated Mobile Application Developer, I specialize in building robust applications that scale. My journey has been defined by a commitment to clean code, user-centric design, and staying at the cutting edge of mobile technology. Whether it's Kotlin for native Android or Flutter for cross-platform versatility, I focus on delivering seamless performance.
+            </p>
+            <div class="about__stats">
+              <div class="stat">
+                <div class="stat__number">15+</div>
+                <div class="stat__label">Projects Successfully<br>Launched</div>
+              </div>
+              <div class="stat">
+                <div class="stat__number">100%</div>
+                <div class="stat__label">Client<br>Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ SKILLS ════════════════ -->
+    <section class="section section-skills" id="skills">
+      <div class="container">
+        <div class="skills__header reveal">
+          <h2 class="section-heading">Core Competencies</h2>
+          <span class="heading-bar"></span>
+        </div>
+
+        <div class="skills__grid">
+          <!-- Native Development (spans 2) -->
+          <div class="skill-card glass-card skill-card--wide group reveal">
+            <span class="material-symbols-outlined skill-card__icon">smartphone</span>
+            <h3 class="skill-card__title">Native Development</h3>
+            <div class="skill-card__chips">
+              <span class="chip">Kotlin</span>
+              <span class="chip">Java</span>
+              <span class="chip">Android SDK</span>
+              <span class="chip">Jetpack Compose</span>
+            </div>
+          </div>
+
+          <!-- Cross-Platform -->
+          <div class="skill-card glass-card group reveal">
+            <span class="material-symbols-outlined skill-card__icon">layers</span>
+            <h3 class="skill-card__title">Cross-Platform</h3>
+            <div class="skill-card__chips">
+              <span class="chip">Flutter</span>
+              <span class="chip">Dart</span>
+            </div>
+          </div>
+
+          <!-- Architecture -->
+          <div class="skill-card glass-card group reveal">
+            <span class="material-symbols-outlined skill-card__icon">construction</span>
+            <h3 class="skill-card__title">Architecture</h3>
+            <div class="skill-card__chips">
+              <span class="chip">MVVM</span>
+              <span class="chip">Clean Arch</span>
+            </div>
+          </div>
+
+          <!-- Data & API -->
+          <div class="skill-card glass-card group reveal">
+            <span class="material-symbols-outlined skill-card__icon">database</span>
+            <h3 class="skill-card__title">Data & API</h3>
+            <div class="skill-card__chips">
+              <span class="chip">Retrofit</span>
+              <span class="chip">Room DB</span>
+              <span class="chip">Firebase</span>
+            </div>
+          </div>
+
+          <!-- Professional Process (spans 2, neutral) -->
+          <div class="skill-card glass-card skill-card--wide skill-card--neutral group reveal">
+            <span class="material-symbols-outlined skill-card__icon skill-card__icon--rotate">history_edu</span>
+            <h3 class="skill-card__title">Professional Process</h3>
+            <div class="skill-card__chips">
+              <span class="chip chip--neutral">Git / CI/CD</span>
+              <span class="chip chip--neutral">Agile / Jira</span>
+              <span class="chip chip--neutral">Code Reviews</span>
+              <span class="chip chip--neutral">Unit Testing</span>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="skill-card glass-card group reveal">
+            <span class="material-symbols-outlined skill-card__icon">translate</span>
+            <h3 class="skill-card__title">Languages</h3>
+            <p class="skill-card__text">English (Professional), Malayalam (Native)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ PROJECTS ════════════════ -->
+    <section class="section section-projects" id="projects">
+      <div class="container">
+        <div class="projects__header reveal">
+          <div>
+            <h2 class="section-heading">Featured Work</h2>
+            <p class="section-subheading">Selected projects demonstrating my expertise in performance and design.</p>
+          </div>
+          <div class="projects__line"></div>
+        </div>
+
+        <div class="projects__grid">
+          <!-- E-Credits -->
+          <div class="card-project glass-card group reveal" style="transition-delay: 0.1s">
+            <div class="card-project__image-wrapper">
+              <img class="card-project__image" src="/assets/images/project-ecredits.png" alt="E-Credits fintech app" loading="lazy">
+              <div class="card-project__badge">
+                <span class="badge">Fintech</span>
+              </div>
+            </div>
+            <div class="card-project__content">
+              <h3 class="card-project__title">E-Credits</h3>
+              <p class="card-project__desc">A high-performance digital wallet and reward system built with native Kotlin. Focused on security and real-time transaction processing.</p>
+              <div class="card-project__chips">
+                <span class="chip chip--sm">Kotlin</span>
+                <span class="chip chip--sm">Clean Architecture</span>
+                <span class="chip chip--sm">Biometrics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shopkick -->
+          <div class="card-project glass-card group reveal" style="transition-delay: 0.2s">
+            <div class="card-project__image-wrapper">
+              <img class="card-project__image" src="/assets/images/project-shopkick.png" alt="Shopkick rewards app" loading="lazy">
+              <div class="card-project__badge">
+                <span class="badge">Retail</span>
+              </div>
+            </div>
+            <div class="card-project__content">
+              <h3 class="card-project__title">Shopkick</h3>
+              <p class="card-project__desc">Integration of shopping rewards and location-based triggers. Optimized for battery life and background location accuracy.</p>
+              <div class="card-project__chips">
+                <span class="chip chip--sm">Android SDK</span>
+                <span class="chip chip--sm">Geo-fencing</span>
+                <span class="chip chip--sm">REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poker Trax -->
+          <div class="card-project glass-card group reveal" style="transition-delay: 0.1s">
+            <div class="card-project__image-wrapper">
+              <img class="card-project__image" src="/assets/images/project-pokertrax.png" alt="Poker Trax analytics app" loading="lazy">
+              <div class="card-project__badge">
+                <span class="badge">Analytics</span>
+              </div>
+            </div>
+            <div class="card-project__content">
+              <h3 class="card-project__title">Poker Trax</h3>
+              <p class="card-project__desc">A comprehensive session tracking and analysis app for players. Heavy focus on custom data visualization and local database management.</p>
+              <div class="card-project__chips">
+                <span class="chip chip--sm">Flutter</span>
+                <span class="chip chip--sm">SQLite</span>
+                <span class="chip chip--sm">Charts.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lead Collection -->
+          <div class="card-project glass-card group reveal" style="transition-delay: 0.2s">
+            <div class="card-project__image-wrapper">
+              <img class="card-project__image" src="/assets/images/project-leadcollect.png" alt="Lead Collection enterprise app" loading="lazy">
+              <div class="card-project__badge">
+                <span class="badge badge--white">Enterprise</span>
+              </div>
+            </div>
+            <div class="card-project__content">
+              <h3 class="card-project__title">Lead Collection App</h3>
+              <p class="card-project__desc">Enterprise-grade offline-first lead capture tool for sales teams. Seamless synchronization with CRM systems upon connection.</p>
+              <div class="card-project__chips">
+                <span class="chip chip--sm chip--neutral">Java</span>
+                <span class="chip chip--sm chip--neutral">Offline Sync</span>
+                <span class="chip chip--sm chip--neutral">Enterprise APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ EXPERIENCE ════════════════ -->
+    <section class="section section-experience" id="experience">
+      <div class="container container--narrow">
+        <h2 class="section-heading experience__heading reveal">Career Journey</h2>
+
+        <div class="experience__timeline">
+          <!-- Role 1 -->
+          <div class="timeline-item timeline-item--1 reveal">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__header">
+              <h3 class="timeline-item__title">Android Application Developer</h3>
+              <span class="timeline-item__date">E-credits | 2021 — Present</span>
+            </div>
+            <p class="timeline-item__body">
+              Leading the native Android development for a fintech ecosystem. Implementing complex security layers, biometric authentication, and optimizing app performance for low-end devices. Mentoring junior developers and managing deployment pipelines.
+            </p>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="timeline-item timeline-item--2 reveal">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__header">
+              <h3 class="timeline-item__title">Mobile App Developer</h3>
+              <span class="timeline-item__date">Shopkick, by Trax | 2019 — 2021</span>
+            </div>
+            <p class="timeline-item__body">
+              Collaborated with global teams to enhance the Shopkick rewards experience. Focused on improving geofencing accuracy and background synchronization logic using advanced Android SDK capabilities.
+            </p>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="timeline-item timeline-item--3 reveal">
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__header">
+              <h3 class="timeline-item__title">Junior Developer</h3>
+              <span class="timeline-item__date">Enffle Technologies | 2018 — 2019</span>
+            </div>
+            <p class="timeline-item__body">
+              Started my professional career building foundational mobile features and utility applications. Gained deep expertise in Java and early Android development patterns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ EDUCATION ════════════════ -->
+    <section class="section section-education" id="education">
+      <div class="container">
+        <div class="education__header reveal">
+          <span class="education__header-line"></span>
+          <h2 class="education__title">Education</h2>
+        </div>
+
+        <div class="education__grid">
+          <div class="education-card glass-card reveal">
+            <span class="education-card__eyebrow">Post Graduation</span>
+            <h3 class="education-card__degree">Post Graduate Diploma in Mobile Applications</h3>
+            <p class="education-card__institution">Georgian College, Barrie, Ontario</p>
+            <div class="education-card__date">
+              <span class="material-symbols-outlined">calendar_today</span>
+              Completed 2018
+            </div>
+          </div>
+
+          <div class="education-card education-card--secondary glass-card reveal" style="transition-delay: 0.1s">
+            <span class="education-card__eyebrow">Undergraduate</span>
+            <h3 class="education-card__degree">Bachelor of Computer Applications (BCA)</h3>
+            <p class="education-card__institution">Jai Bharath Arts and Science College, Ernakulam, India</p>
+            <div class="education-card__date">
+              <span class="material-symbols-outlined">calendar_today</span>
+              Completed 2016
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════ CONTACT ════════════════ -->
+    <section class="section section-contact" id="contact">
+      <div class="contact__bg mesh-bg"></div>
+      <div class="contact__content container">
+        <div class="reveal">
+          <h2 class="contact__heading">
+            Let's <span class="gradient-text neon-text-glow">Connect</span>
+          </h2>
+          <p class="contact__intro">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+          </p>
+        </div>
+
+        <div class="contact__grid">
+          <a class="contact-card glass-card reveal" href="mailto:jithin6904@gmail.com">
+            <span class="material-symbols-outlined contact-card__icon">alternate_email</span>
+            <h4 class="contact-card__title">Email</h4>
+            <p class="contact-card__value">jithin6904@gmail.com</p>
+          </a>
+
+          <a class="contact-card glass-card reveal" href="https://linkedin.com/in/jithinraj0" target="_blank" rel="noopener" style="transition-delay: 0.1s">
+            <span class="material-symbols-outlined contact-card__icon">link</span>
+            <h4 class="contact-card__title">LinkedIn</h4>
+            <p class="contact-card__value">linkedin.com/in/jithinraj0</p>
+          </a>
+
+          <a class="contact-card glass-card reveal" href="tel:+14379892406" style="transition-delay: 0.2s">
+            <span class="material-symbols-outlined contact-card__icon">call</span>
+            <h4 class="contact-card__title">Phone</h4>
+            <p class="contact-card__value">+1 (437) 989-2406</p>
+          </a>
+        </div>
+
+        <button class="contact__resume-btn reveal">Download Resume</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__logo">Jithin Raj</div>
+      <p class="footer__copyright">© <span id="copyright-year"></span> NeonArchitect. Built with precision.</p>
+      <div class="footer__links">
+        <a class="footer__link" href="https://github.com/jithinraj0" target="_blank" rel="noopener">GitHub</a>
+        <a class="footer__link" href="https://linkedin.com/in/jithinraj0" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="footer__link" href="https://polywork.com" target="_blank" rel="noopener">Polywork</a>
+        <a class="footer__link" href="mailto:jithin6904@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════ WHATSAPP FAB ════════════════ -->
+  <a class="whatsapp-fab" href="https://wa.me/14379892406" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="whatsapp-fab__icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.7 9.1 31.7 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+    <span class="whatsapp-fab__tooltip">Chat with me</span>
+  </a>
+
+  <!-- JS -->
+  <script src="/js/cursor.js" defer></script>
+  <script src="/js/nav.js" defer></script>
+  <script src="/js/reveal.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
